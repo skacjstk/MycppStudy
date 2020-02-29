@@ -5,22 +5,24 @@
 */
 
 #include <iostream>
+#include <cstdlib>		//랜덤 함수 생성 용
+#include <ctime>	//시간 시드용
 #define MAX_ARRAY 10
 
-int array[MAX_ARRAY] = { 4, 8, 2, 3, 9 ,1 ,6, 10 ,5, 7 };
+int array[MAX_ARRAY] = { 0, };
 
 void quickSort(int *data, int start, int end) {
 	if (start >= end)	//원소가 1개(더 안쪼개질 경우) 냅두기
-		return;	
+		return;
 
 	int temp;	//데이터 교환용 임시 버퍼 
 	int pivot = start; //pivot 방향 
-	int i = start +1; //시작 원소부터 탐색 >(Greater) 탐색
+	int i = start + 1; //시작 원소부터 탐색 >(Greater) 탐색
 	int j = end;	//끝 원소부터 탐색 <(Less) 탐색
 
-	while(i <= j){	//엇갈릴 때까지 반복
+	while (i <= j) {	//엇갈릴 때까지 반복
 		while (i <= end && data[pivot] >= data[i]) //피벗 값보다 큰 원소 찾기 
-			++i;						
+			++i;
 		while (j > start && data[pivot] <= data[j])	//피벗 값보다 작은 원소 찾기
 			--j;
 
@@ -35,7 +37,7 @@ void quickSort(int *data, int start, int end) {
 			data[j] = temp;
 		}
 	}
-	quickSort(data, start, j-1);	//j의 위치에 pivot이 왔으니까 j를 기준으로 반갈죽
+	quickSort(data, start, j - 1);	//j의 위치에 pivot이 왔으니까 j를 기준으로 반갈죽
 	quickSort(data, j + 1, end);
 
 }
@@ -46,24 +48,14 @@ void dataShow(const int *data) {
 	}
 	std::cout << "\n";
 }
-/*		
-//*data 와 &(data)[10]은 같다. 애초에 포인터니까 당연한거긴 한데 
-void dataShow(const int *data, int *test) {
-	for (int i = 0; i < MAX_ARRAY; ++i) {
-		std::cout << array[i] << " ";
-	}
-	test[0] = 5;
-	std::cout << "\n";
-}
-*/
-
 int main(void)
 {
+	srand((unsigned int)time(NULL));
+	for (int i = 0; i < MAX_ARRAY; ++i)
+	{
+		array[i] = rand();
+	}
 	dataShow(array);
 	quickSort(array, 0, MAX_ARRAY - 1);
 	dataShow(array);
-	//	int test[1];
-	//	test[0] = 1;
-	//dataShow(array, test);
-	//std::cout << test[0];
 }
