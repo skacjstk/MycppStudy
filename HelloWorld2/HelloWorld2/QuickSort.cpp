@@ -4,12 +4,7 @@
 	n*n의 시간복잡도를 보인다.
 */
 
-#include <iostream>
-#include <cstdlib>		//랜덤 함수 생성 용
-#include <ctime>	//시간 시드용
-#define MAX_ARRAY 10
-
-int array[MAX_ARRAY] = { 0, };
+#include "Sort.h"
 
 void quickSort(int *data, int start, int end) {
 	if (start >= end)	//원소가 1개(더 안쪼개질 경우) 냅두기
@@ -38,23 +33,13 @@ void quickSort(int *data, int start, int end) {
 		}
 	}
 	quickSort(data, start, j - 1);	//j의 위치에 pivot이 왔으니까 j를 기준으로 반갈죽
-	quickSort(data, j + 1, end);
-
+	quickSort(data, j + 1, end);	
 }
 
-void dataShow(const int *data) {
-	for (int i = 0; i < MAX_ARRAY; ++i) {
-		std::cout << array[i] << " ";
-	}
-	std::cout << "\n";
-}
+
 int main(void)
-{
-	srand((unsigned int)time(NULL));
-	for (int i = 0; i < MAX_ARRAY; ++i)
-	{
-		array[i] = rand();
-	}
+{	
+	randomInputData(array,1 ,20);
 	dataShow(array);
 	quickSort(array, 0, MAX_ARRAY - 1);
 	dataShow(array);
