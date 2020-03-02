@@ -2,6 +2,7 @@
 #include <iostream>
 #include <cstdlib>		//랜덤 함수 생성 용
 #include <ctime>	//시간 시드용
+#include <algorithm>	//swap() 함수 사용 
 
 
 #define MAX_ARRAY 10
