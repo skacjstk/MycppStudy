@@ -2,15 +2,8 @@
 
 // 이 자료구조 Heap은 root 노드의 index 가 0 이다. 
 void heapify(int* data, int size, int mid);
-
-void buildMaxHeap(int* data, int size) {
-	int mid = size / 2 - 1;
-
-	for (mid; mid >= 0; --mid) {
-		heapify(data, size, mid);
-	}
-}
-void heapSort(int* data, int size){
+void buildMaxHeap(int* data, int size);
+void heapSort(int* data, int size) {
 	// 중간에서 시작( index가 10이면 5에서 시작) 그러나 시작이 0이니까 4 
 	buildMaxHeap(data, size);
 	while (size > 1) {
@@ -19,6 +12,14 @@ void heapSort(int* data, int size){
 		heapify(data, size, 0);
 	}
 }
+void buildMaxHeap(int* data, int size) {
+	int mid = size / 2 - 1;
+
+	for (mid; mid >= 0; --mid) {
+		heapify(data, size, mid);
+	}
+}
+
 
 void heapify(int* data, int size, int mid) {
 	int parent = mid;

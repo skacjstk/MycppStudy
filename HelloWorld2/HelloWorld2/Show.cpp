@@ -4,7 +4,7 @@ int array[MAX_ARRAY] = { 0, };
 
 void dataShow(const int *data) {
 	for (int i = 0; i < MAX_ARRAY; ++i) {
-		std::cout << array[i] << " ";
+		std::cout << data[i] << " ";
 	}
 	std::cout << "\n";
 }
