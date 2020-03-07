@@ -19,6 +19,7 @@ void counterDebug(int *counter,int counterSize) {
 }
 void countingSort(int *data,int size) {
 	int sorted[MAX_ARRAY];
+	std::cout << size;
 /*https://namwhis.tistory.com/entry/C-%EB%B0%B0%EC%97%B4-%EC%B4%88%EA%B8%B0%ED%99%94-stdfill-stdfilln-%EC%A0%95%EB%A6%AC*/
 	int counter[dataRange + 1] = { 0, };
 	for (int i = 0; i < size; ++i) {
@@ -42,11 +43,10 @@ void countingSort(int *data,int size) {
 }
 
 
-
 int main(void)
 {
 	randomInputData(array, 1, dataRange);
 	dataShow(array);
-	countingSort(array,MAX_ARRAY);
+	countingSort(array);
 	dataShow(array);
 }
