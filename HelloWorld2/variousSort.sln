@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.1022
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HelloWorld2", "HelloWorld2\HelloWorld2.vcxproj", "{AA56555D-EE5B-452F-A2F5-EDF75206660C}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SortCode", "HelloWorld2\HelloWorld2.vcxproj", "{AA56555D-EE5B-452F-A2F5-EDF75206660C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "dataStructure", "dataStructure\dataStructure.vcxproj", "{69BEFB69-2F71-4952-AC47-DB5B0753E456}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,14 @@ Global
 		{AA56555D-EE5B-452F-A2F5-EDF75206660C}.Release|x64.Build.0 = Release|x64
 		{AA56555D-EE5B-452F-A2F5-EDF75206660C}.Release|x86.ActiveCfg = Release|Win32
 		{AA56555D-EE5B-452F-A2F5-EDF75206660C}.Release|x86.Build.0 = Release|Win32
+		{69BEFB69-2F71-4952-AC47-DB5B0753E456}.Debug|x64.ActiveCfg = Debug|x64
+		{69BEFB69-2F71-4952-AC47-DB5B0753E456}.Debug|x64.Build.0 = Debug|x64
+		{69BEFB69-2F71-4952-AC47-DB5B0753E456}.Debug|x86.ActiveCfg = Debug|Win32
+		{69BEFB69-2F71-4952-AC47-DB5B0753E456}.Debug|x86.Build.0 = Debug|Win32
+		{69BEFB69-2F71-4952-AC47-DB5B0753E456}.Release|x64.ActiveCfg = Release|x64
+		{69BEFB69-2F71-4952-AC47-DB5B0753E456}.Release|x64.Build.0 = Release|x64
+		{69BEFB69-2F71-4952-AC47-DB5B0753E456}.Release|x86.ActiveCfg = Release|Win32
+		{69BEFB69-2F71-4952-AC47-DB5B0753E456}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
