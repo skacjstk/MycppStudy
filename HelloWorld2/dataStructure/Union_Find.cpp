@@ -51,6 +51,7 @@ int main(void)
 	std::cout << "node 간 간선의 수 입력:";
 	std::cin >> cnt;	
 
+
 	ParentInitialize(parentList);
 
 	for (int i = 0; i < cnt; ++i) {
