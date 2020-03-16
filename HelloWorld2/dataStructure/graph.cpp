@@ -36,11 +36,11 @@ public:
 	}
 };
 void DFS(Graph const& graph, int v, std::vector<bool>& discoverd) {
-//	if (discoverd[v]) return;	//이미 방문한 적 있으면 return 
+	if (discoverd[v]) return;	//이미 방문한 적 있으면 return 
 	discoverd[v] = true;
 	std::cout << v << " ";
 	for (int i : graph.adjList[v]) {
-		if (!discoverd[i]) //방문한 적이 없다면(사실 큐에 넣은적 없다면)
+//		if (!discoverd[i]) //방문한 적이 없다면(사실 큐에 넣은적 없다면)
 			DFS(graph, i, discoverd);
 		
 	}
