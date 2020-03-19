@@ -42,5 +42,8 @@
     <ClCompile Include="BOJ10989_numberSort.cpp">
       <Filter>소스 파일\BOJ</Filter>
     </ClCompile>
+    <ClCompile Include="BOJ4963_numOfIsland.cpp">
+      <Filter>소스 파일\BOJ</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
