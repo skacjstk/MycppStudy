@@ -7,10 +7,14 @@
 	반복문으로 검사하면서 재귀함수로 DFS 탐색하여 그 0 기준으로 8방향으로 가지를 뻣어나가듯이 
 	탐색하면서 방문했음을 확인한다.
 */
+/*
+	2방 ,4방, 8방 섬기준 검색 추가
+
+*/
 
 
-int vi[8] = { -1, -1, 0, 1, 1, 1, 0, -1 };
-int vj[8] = { 0, 1, 1, 1, 0, -1, -1, -1 };
+int vi[8] = { 0, 0, -1, 1, -1, 1, -1, 1 };	//width (앞뒤)
+int vj[8] = { -1, 1, 0, 0, -1, -1, 1, 1 }; // height (위아래) 
 void DFS(std::vector<std::vector<int>> &visited, int i, int j) {
 	if (visited[i][j] != 0) {
 		visited[i][j] = 0;
@@ -29,6 +33,7 @@ int main() {
 			std::cout<<"높이나 너비가 50을 초과했습니다.";
 			continue;
 		}
+
 		std::vector<std::vector<int>> map(w + 2, std::vector<int>(h + 2, 0));
 		//w+2, h+2 칸의 0초기화 2차원벡터 이름: map
 

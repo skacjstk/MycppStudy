@@ -82,7 +82,7 @@ int main(void)
 	int x, y, z, cnt;
 	
 	std::cout << "크루스칼 알고리즘\nnode 간 간선의 수 입력:";
-	std::cin >> cnt;
+	std::cin >> cnt; 
 	ParentInitialize(parentList);
 	qArr.resize(cnt);
 	for (int i = 0; i < cnt; ++i) {
