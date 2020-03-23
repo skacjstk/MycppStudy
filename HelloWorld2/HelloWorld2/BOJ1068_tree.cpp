@@ -1,84 +1,76 @@
 #include <iostream>
+#include <algorithm>
 #include <vector>
-#include <utility>
 //인접 리스트로 표현해야지
 
-;
+
 class Graph
 {
 public:
 	// construct a vector of vectors to represent an adjacency list
 	//adjacency 뜻: 인접
 	std::vector<std::vector<int>> adjList;
-	std::vector<std::pair<bool, int>> isleaf;	//leaf 노드인지, 자식의 수가 몇인지
-	
+//	std::vector<std::pair<bool, int>> isleaf;	//leaf 노드인지, 자식의 수가 몇인지
+		//폐기됨.	
 
 	// Graph Constructor
 	Graph(int N)
 	{
 		// resize the vector to N elements of type vector<int>
 		adjList.resize(N);
-		isleaf.resize(N);	//그 인덱스가 leaf 노드인지 판별한다.
-		for (int i = 0; i < N; ++i) 
-			isleaf[i].second = 0;		//혹시몰라
-		/*
-		// add edges to the directed graph
-		for (auto &edge : edges)
-		{
-			// insert at the end
-			adjList[edge.src].push_back(edge.dest);
-
-			// Uncomment below line for undirected graph
-			// 무향 그래프면 바로 아랫줄 주석을 지워 쌍방향으로 이을 것
-			 adjList[edge.dest].push_back(edge.src);
-		} */
 	}
-	void NodeConnect(const int &i, const int &myParent) {
+	void NodeConnect(const int &index, const int &myParent, int &root) {
 		if (myParent == -1){
-			adjList[i].push_back(myParent);
-			isleaf[i].first = false;
+			root = index;	//root 갱신, 
+			return;
 		}
 		else {
-			adjList[myParent].push_back(i);
-			isleaf[myParent].first = false;
-			isleaf[i].first = true;
-
+			adjList[myParent].push_back(index);
 		}
-	}	//노드 연결과 leaf노드 수정
-	void numOfleaf(const Graph &graph) {		
-		int leafCnt = 0;
-		for (auto i : graph.isleaf) {
-			if (i.first)
+		return;
+	}	//노드 연결과 
+
+	void numOfleaf(const int &deleteNode,const int &now_node, int& leafCnt) {
+		if (now_node == deleteNode) return;
+		int childSize = adjList[now_node].size();	//이 node가 가지고 있는 자식의 수
+		switch (childSize) {
+		case 0:	//자식이 없으면 자신이 leafNode 이다.
+			++leafCnt; return; 
+			break; //필요없음.
+		case 1:	//자식이 1개면 
+			//자기 자식이 지울 대상이라면, 자신은 leafNode 가 된다.
+			if (adjList[now_node][0] == deleteNode){
 				++leafCnt;
-		} 
-		std::cout <<"리프노드 갯수: "<< leafCnt<< "\n";
+				break;
+			}
+		default:	//자식 수만큼 반복
+			for (int i = 0; i < childSize; ++i) {
+				numOfleaf(deleteNode, adjList[now_node][i], leafCnt);	
+				//다른건 그대로고, now_node(부모) 의 자식 node 수 만큼 재귀함수 실행
+			}//endfor
+			break;
+		}//end switch
+		return;
 	}
 
-	void DeleteNode(int deleteNode) {
-		isleaf[deleteNode].first = false;
-
-	}
 };			// 0 1 2 3 4
 int main(void)
 {
 	int numOfNode = 0;
-	int myParent = 0;
-	int deleteNode;
-	int leafCnt = 0;
+	int deleteNode = 0;
 	std::cin >> numOfNode;
-
 	Graph graph(numOfNode);
+	int root = 0;
+	int myParent = 0;
 	for (int i = 0; i < numOfNode; ++i) {
 		std::cin >> myParent;
-		graph.NodeConnect(i, myParent);
+		graph.NodeConnect(i, myParent, root);
 	}
-	graph.numOfleaf(graph);
 	
 	std::cin >> deleteNode;
-	graph.DeleteNode(deleteNode);
-	//제거할 노드
-	/*
-	구현: isleaf 를 false 로 만들어야 한다.
-		DFS 로 
-	*/
+	int leafCnt = 0;//0은 최상위 노드
+	graph.numOfleaf(deleteNode, root, leafCnt);	
+
+	std::cout << leafCnt;
+	return 0;
 }
