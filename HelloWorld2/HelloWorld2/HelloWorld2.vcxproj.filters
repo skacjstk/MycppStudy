@@ -54,5 +54,8 @@
     <ClCompile Include="BOJ1003_fibo_adv.cpp">
       <Filter>소스 파일\BOJ</Filter>
     </ClCompile>
+    <ClCompile Include="BOJ2178_mazeSearch.cpp">
+      <Filter>소스 파일\BOJ</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
