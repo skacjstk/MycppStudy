@@ -43,8 +43,7 @@ int main(void)
 		bCheck[idx] = true;	//최종적으로 max값으로 선정된 배열은 다음 max에서 못쓰게 한다.
 		minSum += a[j] * max;
 		//구한 최대값과 정렬한 a[j] 번째와 연산
-	}//endfor
-	
+	}//endfor	
 
 	printf("%d", minSum);
 	return 0;
