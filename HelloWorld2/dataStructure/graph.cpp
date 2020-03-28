@@ -41,8 +41,7 @@ void DFS(Graph const& graph, int v, std::vector<bool>& discoverd) {
 	std::cout << v << " ";
 	for (int i : graph.adjList[v]) {
 		if (!discoverd[i]) //방문한 적이 없다면(사실 큐에 넣은적 없다면)
-			DFS(graph, i, discoverd);
-		
+			DFS(graph, i, discoverd);		
 	}
 	return;
 }

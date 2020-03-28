@@ -57,7 +57,10 @@
     <ClCompile Include="BOJ2178_mazeSearch.cpp">
       <Filter>소스 파일\BOJ</Filter>
     </ClCompile>
-    <ClCompile Include="BOJ2667_AptCnt.cpp">
+    <ClCompile Include="BOJ11724_edgeCnt_BFS.cpp">
+      <Filter>소스 파일\BOJ</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ2667_AptCnt_BFS.cpp">
       <Filter>소스 파일\BOJ</Filter>
     </ClCompile>
   </ItemGroup>
