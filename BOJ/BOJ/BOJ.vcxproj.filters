@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="소스 파일\이분 탐색">
+      <UniqueIdentifier>{243d9c2c-c8a2-4636-a2ee-547ffebc003b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BOJ_10989_수 정렬하기 3.cpp">
@@ -23,6 +26,9 @@
     </ClCompile>
     <ClCompile Include="BOJ_1026번 보물_정렬.cpp">
       <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ1920_FindNumber.cpp">
+      <Filter>소스 파일\이분 탐색</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
