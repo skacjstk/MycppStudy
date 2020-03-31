@@ -30,5 +30,11 @@
     <ClCompile Include="BOJ1920_FindNumber.cpp">
       <Filter>소스 파일\이분 탐색</Filter>
     </ClCompile>
+    <ClCompile Include="BOJ1654_랜선 자르기_200331.cpp">
+      <Filter>소스 파일\이분 탐색</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ1300_K번째 수_200331.cpp">
+      <Filter>소스 파일\이분 탐색</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
