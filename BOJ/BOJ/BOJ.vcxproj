@@ -143,6 +143,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BOJ12015_가장 긴 증가하는 수열 2.cpp" />
     <ClCompile Include="BOJ1300_K번째 수_200331.cpp" />
     <ClCompile Include="BOJ1654_랜선 자르기_200331.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
