@@ -42,5 +42,8 @@
     <ClCompile Include="BOJ2110_공유기설치 200403.cpp">
       <Filter>소스 파일\이분 탐색</Filter>
     </ClCompile>
+    <ClCompile Include="BOJ10816 숫자카드 2.cpp">
+      <Filter>소스 파일\이분 탐색</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
