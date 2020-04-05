@@ -5,25 +5,25 @@
 std::vector<int> card;
 
 int bSearch(int cardNum) {	//stl 없이 upper bound 구현 
-	int left = 1;
-	int right = card.size();
+	int left = 0;
+	int right = card.size()-1;
 	int mid;
 
 	//lower bound 
 	auto lower = card.begin() - std::lower_bound(card.begin(),card.end(), cardNum);		
 	int upper = card.begin() - std::upper_bound(card.begin(), card.end(), cardNum);
 	
-	/*
+	/*	
 	while (left < right) {	//upper bound
 		mid = (left + right) / 2;
 		if (card[mid] <= cardNum)
 			left = mid + 1;
 		else
 			right = mid;
-	}
+	}	//return right
 	*/
 
-	return -upper+lower;
+	return right+lower;
 }
 
 int main(void)
