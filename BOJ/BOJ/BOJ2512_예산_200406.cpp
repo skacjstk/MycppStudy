@@ -33,7 +33,7 @@ int bSearch(int useBudget, int maxBudget) {
 
 int main()
 {
-	int regionNum;
+	int regionNum;		//3~10,000
 	scanf("%d", &regionNum);
 	region.resize(regionNum);
 	int maxBudget = 0;

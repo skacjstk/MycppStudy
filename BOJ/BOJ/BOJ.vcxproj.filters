@@ -16,6 +16,9 @@
     <Filter Include="소스 파일\이분 탐색">
       <UniqueIdentifier>{243d9c2c-c8a2-4636-a2ee-547ffebc003b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\최소 스패닝 트리">
+      <UniqueIdentifier>{b9c12be8-b402-43f6-a689-9f43536f551d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BOJ_10989_수 정렬하기 3.cpp">
@@ -47,6 +50,18 @@
     </ClCompile>
     <ClCompile Include="BOJ2869_달팽이는 올라가고싶다_200405.cpp">
       <Filter>소스 파일\이분 탐색</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ2512_예산_200406.cpp">
+      <Filter>소스 파일\이분 탐색</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ3020_개똥벌레_200406.cpp">
+      <Filter>소스 파일\이분 탐색</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ2805_나무 자르기_200407.cpp">
+      <Filter>소스 파일\이분 탐색</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ1922_네트워크 연결_200408.cpp">
+      <Filter>소스 파일\최소 스패닝 트리</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

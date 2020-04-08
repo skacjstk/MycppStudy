@@ -55,12 +55,13 @@ bool Compare(const edge &x, const edge &y){
 	//https://namnamseo.tistory.com/entry/stdsort%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EC%A0%95%EB%A0%AC
 	//왜인지는 모르겠지만 const 와 &를 넣으라고 한다. const 는 상수화, &는 참조이니 거기에 의미가 있겠지..?
 	//근데 빼도 되기는 된다...?
+	//200407 기준 lvalue 와  rvalue 를 어느정도 알았다.
 	if (x.height < y.height) {
 		return true;
 	}
 	else
 		return false;
-};
+};	//true 일 경우 냅두고 false 일 경우 swap() 
 
 int kruskal(std::vector<int> &parent, std::vector<edge> &qArr) {
 	int maxHeight = 0; //가중치 최솟값

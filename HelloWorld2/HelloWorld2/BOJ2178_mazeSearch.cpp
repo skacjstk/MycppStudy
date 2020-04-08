@@ -39,7 +39,7 @@ void BFS(int y, int x) {
 						visited[newy][newx] = true; //이제 탐색했음(할꺼임)
 						away[newy][newx] = away[y][x] + 1;
 						q.push(std::make_pair(newy, newx));
-						printf("새 좌표 y:%d-->%d, x:%d-->%d 진입\n", y,newy, x,newx);
+//						printf("새 좌표 y:%d-->%d, x:%d-->%d 진입\n", y,newy, x,newx);
 					}
 				}
 			}//endif	
