@@ -19,6 +19,9 @@
     <Filter Include="소스 파일\최소 스패닝 트리">
       <UniqueIdentifier>{b9c12be8-b402-43f6-a689-9f43536f551d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\다익스트라 알고리즘">
+      <UniqueIdentifier>{c1a75349-f048-46a1-9b67-db1a3bae12a0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BOJ_10989_수 정렬하기 3.cpp">
@@ -62,6 +65,9 @@
     </ClCompile>
     <ClCompile Include="BOJ1922_네트워크 연결_200408.cpp">
       <Filter>소스 파일\최소 스패닝 트리</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ1753_최단 경로_200410.cpp">
+      <Filter>소스 파일\다익스트라 알고리즘</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
