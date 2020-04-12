@@ -69,7 +69,7 @@
     <ClCompile Include="BOJ1753_최단 경로_200410.cpp">
       <Filter>소스 파일\다익스트라 알고리즘</Filter>
     </ClCompile>
-    <ClCompile Include="BOJ1916_최소비용 구하기.cpp">
+    <ClCompile Include="BOJ1916_최소비용 구하기_200412.cpp">
       <Filter>소스 파일\다익스트라 알고리즘</Filter>
     </ClCompile>
   </ItemGroup>

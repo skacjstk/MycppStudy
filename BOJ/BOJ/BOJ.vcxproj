@@ -158,7 +158,7 @@
     <ClCompile Include="BOJ1753_최단 경로_200410.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="BOJ1916_최소비용 구하기.cpp" />
+    <ClCompile Include="BOJ1916_최소비용 구하기_200412.cpp" />
     <ClCompile Include="BOJ1920_FindNumber.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
