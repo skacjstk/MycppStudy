@@ -43,9 +43,9 @@ void dijkstra(int &yExit, int &xExit)
 			int newWall = pqWall + wall[newCol][newRow];
 
 			if (newWall < path[newCol][newRow]) {
-						printf("[%d][%d]벽:%d ->  ",newCol,newRow, path[newCol][newRow]);
+	//					printf("[%d][%d]벽:%d ->  ",newCol,newRow, path[newCol][newRow]);
 				path[newCol][newRow] = newWall;
-				printf("%d\n", newWall);
+	//			printf("%d\n", newWall);
 				pq.push({-newWall ,{newCol,newRow }});
 			}
 		}
@@ -55,7 +55,7 @@ void dijkstra(int &yExit, int &xExit)
 int main()
 {
 	int col, row;   //열 행 
-	scanf("%d %d", &col, &row);
+	scanf("%d %d", &row, &col);
 	for (int i = 0; i < col; ++i) {
 		for (int j = 0; j < row; ++j) {
 			scanf("%1d", &wall[i][j]);   //벽 상태 기록 (bool로 하면 메모리절약 가능)
