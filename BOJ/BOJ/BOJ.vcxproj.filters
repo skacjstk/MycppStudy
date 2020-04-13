@@ -72,5 +72,8 @@
     <ClCompile Include="BOJ1916_최소비용 구하기_200412.cpp">
       <Filter>소스 파일\다익스트라 알고리즘</Filter>
     </ClCompile>
+    <ClCompile Include="BOJ1261_알고스팟(미로찾기)_200413.cpp">
+      <Filter>소스 파일\다익스트라 알고리즘</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
