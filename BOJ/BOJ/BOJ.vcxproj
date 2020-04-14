@@ -149,7 +149,10 @@
     <ClCompile Include="BOJ12015_가장 긴 증가하는 수열 2.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="BOJ1261_알고스팟(미로찾기)_200413.cpp" />
+    <ClCompile Include="BOJ1238_파티_200414.cpp" />
+    <ClCompile Include="BOJ1261_알고스팟(미로찾기)_200413.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="BOJ1300_K번째 수_200331.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
