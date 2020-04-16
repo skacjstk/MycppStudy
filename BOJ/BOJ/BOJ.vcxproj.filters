@@ -78,5 +78,8 @@
     <ClCompile Include="BOJ1238_파티_200414.cpp">
       <Filter>소스 파일\다익스트라 알고리즘</Filter>
     </ClCompile>
+    <ClCompile Include="BOJ1504_특정한 최단 경로.cpp">
+      <Filter>소스 파일\다익스트라 알고리즘</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
