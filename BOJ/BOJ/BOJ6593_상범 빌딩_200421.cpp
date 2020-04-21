@@ -11,14 +11,14 @@ int  cost[30][30][30];
 int start[3] = { 0 };
 int end[3] = { 0 };
 
-static int floor = -1, row = -1, col = -1;
+static int buildfloor = -1, row = -1, col = -1;
 
 const short stepSize = 6; //움직이는 방향
 
 int step[stepSize][3] = { {0, 0,-1},{0, -1,0},{0, 0,1},{0, 1,0},{-1,0,0}, {1,0,0} };	//z x y , 뒤 위 앞 아래 하 상
 
 struct a {
-	int cost, floor, row, col;
+	int cost, buildfloor, row, col;
 
 };
 typedef struct a buildingSize;
@@ -39,7 +39,7 @@ int dijkstra() {
 	pq.push({ 0,start[0],start[1],start[2] }); //가중치 0, z x y 좌표 
 	while (!pq.empty()) {
 		int nowCost = pq.top().cost;
-		int nowFloor = pq.top().floor;
+		int nowFloor = pq.top().buildfloor;
 		int nowRow = pq.top().row;
 		int nowCol = pq.top().col;
 		pq.pop();
@@ -54,7 +54,7 @@ int dijkstra() {
 
 			if (newFloor < 0 || newRow < 0 || newCol < 0)
 				continue;
-			if (newFloor >= floor || newRow >= row || newCol >= col) //3x3x3 일경우 0~2까지니까 
+			if (newFloor >= buildfloor || newRow >= row || newCol >= col) //3x3x3 일경우 0~2까지니까 
 				continue;
 
 			//		printf("%d %d %d\n", newFloor, newRow, newCol);	
@@ -74,10 +74,10 @@ int dijkstra() {
 }
 bool inputBuildingData() {
 
-	scanf("%d %d %d", &floor, &row, &col);
-	if (floor == 0 && floor == row && floor == col)
+	scanf("%d %d %d", &buildfloor, &row, &col);
+	if (buildfloor == 0 && buildfloor == row && buildfloor == col)
 		return false;
-	for (int i = floor - 1; i >= 0; --i) {
+	for (int i = buildfloor - 1; i >= 0; --i) {
 		//		getchar();
 		for (int j = 0; j < row; ++j) {
 			//			getchar();
