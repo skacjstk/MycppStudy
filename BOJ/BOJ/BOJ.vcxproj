@@ -188,6 +188,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="BOJ4485_젤다(도둑루피).cpp" />
+    <ClCompile Include="BOJ6593_상범 빌딩_200421.cpp" />
     <ClCompile Include="BOJ_1026번 보물_정렬.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>

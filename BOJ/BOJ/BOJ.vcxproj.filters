@@ -84,5 +84,8 @@
     <ClCompile Include="BOJ4485_젤다(도둑루피).cpp">
       <Filter>소스 파일\다익스트라 알고리즘</Filter>
     </ClCompile>
+    <ClCompile Include="BOJ6593_상범 빌딩_200421.cpp">
+      <Filter>소스 파일\다익스트라 알고리즘</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
