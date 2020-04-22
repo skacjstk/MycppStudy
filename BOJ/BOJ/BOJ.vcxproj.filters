@@ -22,6 +22,9 @@
     <Filter Include="소스 파일\다익스트라 알고리즘">
       <UniqueIdentifier>{c1a75349-f048-46a1-9b67-db1a3bae12a0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\위상 정렬">
+      <UniqueIdentifier>{7e51ff95-72e1-462e-9877-33b97f64b3f1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BOJ_10989_수 정렬하기 3.cpp">
@@ -86,6 +89,9 @@
     </ClCompile>
     <ClCompile Include="BOJ6593_상범 빌딩_200421.cpp">
       <Filter>소스 파일\다익스트라 알고리즘</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ2252_위상 정렬_줄 세우기_200422.cpp">
+      <Filter>소스 파일\위상 정렬</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
