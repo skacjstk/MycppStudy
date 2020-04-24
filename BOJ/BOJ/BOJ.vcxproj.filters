@@ -96,5 +96,8 @@
     <ClCompile Include="BOJ1005_위상 정렬_ACMcraft_200423.cpp">
       <Filter>소스 파일\위상 정렬</Filter>
     </ClCompile>
+    <ClCompile Include="BOJ1766_위상 정렬_문제집_200424.cpp">
+      <Filter>소스 파일\위상 정렬</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
