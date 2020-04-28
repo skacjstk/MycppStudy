@@ -25,6 +25,9 @@
     <Filter Include="소스 파일\위상 정렬">
       <UniqueIdentifier>{7e51ff95-72e1-462e-9877-33b97f64b3f1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\강한 연결 요소">
+      <UniqueIdentifier>{6b37351e-c09b-41d5-8215-5cee1bc26087}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BOJ_10989_수 정렬하기 3.cpp">
@@ -98,6 +101,9 @@
     </ClCompile>
     <ClCompile Include="BOJ1766_위상 정렬_문제집_200424.cpp">
       <Filter>소스 파일\위상 정렬</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ2150_강한 연결 요소_제곧내_200428.cpp">
+      <Filter>소스 파일\강한 연결 요소</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
