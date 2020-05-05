@@ -28,6 +28,9 @@
     <Filter Include="소스 파일\강한 연결 요소">
       <UniqueIdentifier>{6b37351e-c09b-41d5-8215-5cee1bc26087}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\네트워크 플로우">
+      <UniqueIdentifier>{302d7ecb-ef07-4410-b869-b99ee2f9f41a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BOJ_10989_수 정렬하기 3.cpp">
@@ -107,6 +110,12 @@
     </ClCompile>
     <ClCompile Include="BOJ4196_강한 연결 요소_도미노.cpp">
       <Filter>소스 파일\강한 연결 요소</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ6497_최소 스패닝 트리+강한 연결 요소_전력난_200501.cpp">
+      <Filter>소스 파일\최소 스패닝 트리</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ2188_네트워크 플로우_축사 배정_200505.cpp">
+      <Filter>소스 파일\네트워크 플로우</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
