@@ -5,7 +5,7 @@
 Write your code in this editor and press "Run" button to compile and execute it.
 
 *******************************************************************************/
-
+#define CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -76,7 +76,7 @@ int main()
 
 	int sum = 0;
 
-	for (long i; i < graph.size(); ++i) {
+	for (long i=0; i < graph.size(); ++i) {
 		if (!graph[i].find(set, graph[i].node[0], graph[i].node[1])) {
 			sum += graph[i].weight;
 			graph[i].Union(set, graph[i].node[0], graph[i].node[1]);
