@@ -34,6 +34,9 @@
     <Filter Include="소스 파일\네트워크 플로우\이분 매칭">
       <UniqueIdentifier>{fb3b6454-4291-427f-bcca-07dd8e22affb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\네트워크 플로우\네트워크 플로우">
+      <UniqueIdentifier>{ddca5957-eb4e-405a-b9de-f7f9e35a0063}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BOJ_10989_수 정렬하기 3.cpp">
@@ -122,6 +125,9 @@
     </ClCompile>
     <ClCompile Include="BOJ11376_이분 매칭_열혈강호2_200506.cpp">
       <Filter>소스 파일\네트워크 플로우\이분 매칭</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ6086_네트워크 플로우_최대 유량_200513.cpp">
+      <Filter>소스 파일\네트워크 플로우\네트워크 플로우</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
