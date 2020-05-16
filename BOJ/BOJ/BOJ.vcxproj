@@ -217,7 +217,9 @@
     <ClCompile Include="BOJ4485_젤다(도둑루피).cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="BOJ5651_네트워크 플로우_완전 중요한 간선_200514.cpp" />
+    <ClCompile Include="BOJ5651_네트워크 플로우_완전 중요한 간선_200514.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="BOJ6086_네트워크 플로우_최대 유량_200513.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
