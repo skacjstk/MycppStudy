@@ -37,6 +37,9 @@
     <Filter Include="소스 파일\네트워크 플로우\네트워크 플로우">
       <UniqueIdentifier>{ddca5957-eb4e-405a-b9de-f7f9e35a0063}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\문자열 처리">
+      <UniqueIdentifier>{36a12242-5f87-45aa-9f3f-76ce9179bece}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BOJ_10989_수 정렬하기 3.cpp">
@@ -131,6 +134,9 @@
     </ClCompile>
     <ClCompile Include="BOJ5651_네트워크 플로우_완전 중요한 간선_200514.cpp">
       <Filter>소스 파일\네트워크 플로우\네트워크 플로우</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ1152_문자열 처리_단어의 개수.cpp">
+      <Filter>소스 파일\문자열 처리</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
