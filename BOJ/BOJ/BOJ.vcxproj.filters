@@ -40,6 +40,9 @@
     <Filter Include="소스 파일\문자열 처리">
       <UniqueIdentifier>{36a12242-5f87-45aa-9f3f-76ce9179bece}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\문자열 처리\KMP">
+      <UniqueIdentifier>{d78b4021-44e8-43c1-991a-86dc97179f3a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BOJ_10989_수 정렬하기 3.cpp">
@@ -137,6 +140,9 @@
     </ClCompile>
     <ClCompile Include="BOJ1152_문자열 처리_단어의 개수.cpp">
       <Filter>소스 파일\문자열 처리</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ1305_KMP_광고.cpp">
+      <Filter>소스 파일\문자열 처리\KMP</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
