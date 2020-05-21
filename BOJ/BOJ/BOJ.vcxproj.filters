@@ -138,10 +138,16 @@
     <ClCompile Include="BOJ5651_네트워크 플로우_완전 중요한 간선_200514.cpp">
       <Filter>소스 파일\네트워크 플로우\네트워크 플로우</Filter>
     </ClCompile>
-    <ClCompile Include="BOJ1152_문자열 처리_단어의 개수.cpp">
+    <ClCompile Include="BOJ1786_KMP_찾기_200519.cpp">
+      <Filter>소스 파일\문자열 처리\KMP</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ1305_KMP_광고_200518.cpp">
+      <Filter>소스 파일\문자열 처리\KMP</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ1152_문자열 처리_단어의 개수_200517.cpp">
       <Filter>소스 파일\문자열 처리</Filter>
     </ClCompile>
-    <ClCompile Include="BOJ1305_KMP_광고.cpp">
+    <ClCompile Include="BOJ1701_KMP_Cubeditor_200520.cpp">
       <Filter>소스 파일\문자열 처리\KMP</Filter>
     </ClCompile>
   </ItemGroup>
