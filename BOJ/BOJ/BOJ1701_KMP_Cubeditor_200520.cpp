@@ -71,10 +71,18 @@ int main()
 
 	getline(std::cin, s);
 
-	std::vector<int> pi = failure_function(s);
+	int answer = 0;
 
-	std::sort(pi.begin(), pi.end());
-	printf("%d\n", pi.back());
+	for (unsigned int i = 0; i < s.size(); ++i) {
+		std::string subs = s.substr(i);
+		std::vector<int> pi = failure_function(subs);
+		std::sort(pi.begin(), pi.end());
+
+		answer = std::max(answer, pi.back());
+	}
+
+	printf("%d\n", answer);
+
 
 	return 0;
 }
