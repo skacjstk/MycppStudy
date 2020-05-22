@@ -150,5 +150,8 @@
     <ClCompile Include="BOJ1701_KMP_Cubeditor_200520.cpp">
       <Filter>소스 파일\문자열 처리\KMP</Filter>
     </ClCompile>
+    <ClCompile Include="BOJ10809_문자열 처리_알파벳 찾기_200522.cpp">
+      <Filter>소스 파일\문자열 처리</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
