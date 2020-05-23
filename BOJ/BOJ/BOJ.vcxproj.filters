@@ -153,5 +153,8 @@
     <ClCompile Include="BOJ10809_문자열 처리_알파벳 찾기_200522.cpp">
       <Filter>소스 파일\문자열 처리</Filter>
     </ClCompile>
+    <ClCompile Include="BOJ1157_문자열 처리_단어공부_200523.cpp">
+      <Filter>소스 파일\문자열 처리</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
