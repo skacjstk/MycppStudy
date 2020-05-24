@@ -146,7 +146,9 @@
     <ClCompile Include="BOJ1005_위상 정렬_ACMcraft_200423.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="BOJ10809_문자열 처리_알파벳 찾기_200522.cpp" />
+    <ClCompile Include="BOJ10809_문자열 처리_알파벳 찾기_200522.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="BOJ10816 숫자카드 2.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>

@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 int main(void) {
@@ -6,7 +7,7 @@ int main(void) {
 	string S;
 	const string a = "ABCDEFGHIJKLMNOPQRSTUVWXYZ?";
 	cin >> S;
-	for (int i = 0; i < S.length(); i++) {
+	for (unsigned int i = 0; i < S.length(); i++) {
 		S[i] = toupper(S[i]);
 		arr[a.find(S[i])]++;
 	}
