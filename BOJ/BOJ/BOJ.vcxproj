@@ -222,6 +222,7 @@
     <ClCompile Include="BOJ2869_달팽이는 올라가고싶다_200405.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="BOJ2908_문자열 처리_상수_200525.cpp" />
     <ClCompile Include="BOJ3020_개똥벌레_200406.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
