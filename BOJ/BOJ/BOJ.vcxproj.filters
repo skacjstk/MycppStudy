@@ -159,5 +159,8 @@
     <ClCompile Include="BOJ2908_문자열 처리_상수_200525.cpp">
       <Filter>소스 파일\문자열 처리</Filter>
     </ClCompile>
+    <ClCompile Include="BOJ5622_문자열 처리_다이얼.cpp">
+      <Filter>소스 파일\문자열 처리</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
