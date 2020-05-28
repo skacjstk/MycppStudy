@@ -39,5 +39,8 @@
     <ClCompile Include="Knuth-Morris-Pratt_StringMatch.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Rabin-Karp.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
