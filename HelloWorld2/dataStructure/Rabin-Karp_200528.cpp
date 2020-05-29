@@ -13,6 +13,7 @@ void findString(string parent, string pattern) {
 		// 제일 처음 초기화 
 		if (i == 0) {
 			for (int j = 0; j < patternSize; j++) {
+				//끝 문자열(인덱스 높은부분) 부터 연산
 				parentHash += parent[patternSize - 1 - j] * power;
 				patternHash += pattern[patternSize - 1 - j] * power;
 
