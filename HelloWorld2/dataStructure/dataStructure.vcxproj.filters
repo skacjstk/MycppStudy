@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="소스 파일\근원적인C++">
+      <UniqueIdentifier>{59869592-2ee3-4463-82bb-760d70df2bc1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="graph.cpp">
@@ -39,8 +42,11 @@
     <ClCompile Include="Knuth-Morris-Pratt_StringMatch.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Rabin-Karp.cpp">
+    <ClCompile Include="Rabin-Karp_200528.cpp">
       <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="함수 템플릿, 특수화200531.cpp">
+      <Filter>소스 파일\근원적인C++</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
