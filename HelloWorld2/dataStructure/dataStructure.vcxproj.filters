@@ -48,5 +48,8 @@
     <ClCompile Include="함수 템플릿, 특수화200531.cpp">
       <Filter>소스 파일\근원적인C++</Filter>
     </ClCompile>
+    <ClCompile Include="키워드%28auto%29_200601.cpp">
+      <Filter>소스 파일\근원적인C++</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
