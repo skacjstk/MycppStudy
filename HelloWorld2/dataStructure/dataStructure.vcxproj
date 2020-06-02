@@ -144,7 +144,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="키워드%28auto%29_200601.cpp" />
+    <ClCompile Include="키워드%28auto%29_200601.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="키워드%28assert, static_assert%29_200602.cpp" />
     <ClCompile Include="함수 템플릿, 특수화200531.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
