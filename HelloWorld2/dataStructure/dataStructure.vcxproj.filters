@@ -54,5 +54,8 @@
     <ClCompile Include="키워드%28assert, static_assert%29_200602.cpp">
       <Filter>소스 파일\근원적인C++</Filter>
     </ClCompile>
+    <ClCompile Include="default, delete 키워드_200604.cpp">
+      <Filter>소스 파일\근원적인C++</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
