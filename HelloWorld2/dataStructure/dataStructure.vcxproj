@@ -147,7 +147,10 @@
     <ClCompile Include="default, delete 키워드_200604.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="virtual, final, override 키워드_200605.cpp" />
+    <ClCompile Include="nullptr.cpp" />
+    <ClCompile Include="virtual, final, override 키워드_200605.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="키워드%28auto%29_200601.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
