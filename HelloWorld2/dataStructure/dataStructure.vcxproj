@@ -147,7 +147,10 @@
     <ClCompile Include="default, delete 키워드_200604.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="nullptr_200608.cpp" />
+    <ClCompile Include="enum_enumClass_200609.cpp" />
+    <ClCompile Include="nullptr_200608.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="virtual, final, override 키워드_200605.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
