@@ -1,36 +1,21 @@
-#include <map>
-#include <iostream>
 
-using namespace std;
+#include <iostream>
+#include <map>
+#include <string>
 
 int main() {
-	map<string, int> m;
+	std::map<std::string, int> m;
 
-	/*insert*/cout << "**********insert**********" << endl;
-	/*1*/m.insert(pair<string, int>("marin", 40));
-	/*2*/m.insert(make_pair("scv", 60));
-	/*3*/m["firebat"] = 50;
+	m["marine"] = 40;
+//	std::cout << m["marine"];
+	m.insert(std::make_pair("firebat", 50));
 
-	/*iterate*/cout << "**********iterate**********" << endl;
-	/*1*/map<string, int>::iterator it; // auto it = m.begin()µµ °¡´É
-
-	/*find*/cout << "**********find**********" << endl;
-	/*1*/cout << m.find("scv")->first << " " << m.find("scv")->second << endl;
-	/*2*/cout << "scv" << " " << m["scv"] << endl;
-
-
-	/*erase*/cout << "**********erase**********" << endl;
-	/*1*/m.erase("scv");
-	/*2*/m.erase(m.find("marin"));
-	for (pair<string, int> atom : m) {
-		cout << atom.first << " " << atom.second << endl;
+	for (auto i : m) {
+		std::cout << i.first <<": "<< i.second << "\n";
 	}
-
-	/*size*/cout << "**********size**********" << endl;
-	cout << m.size() << endl;
-
-	/*empty*/cout << "**********empty**********" << endl;
-	cout << m.empty() << endl;
 
 	return 0;
 }
+//https://kamang-it.tistory.com/entry/mapunorderedmapC%EC%97%90%EC%84%9C-map%EB%94%95%EC%85%94%EB%84%88%EB%A6%ACdictionary-%EC%97%B0%EA%B4%80%EB%B0%B0%EC%97%B4associate-array%ED%95%B4%EC%8B%9C%EB%A7%B5hash-map%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0map%EA%B3%BC-unorderedmap-%EA%B7%B8%EB%A6%AC%EA%B3%A0-%EC%B0%A8%EC%9D%B4%EC%A0%90
+
+//EOF
