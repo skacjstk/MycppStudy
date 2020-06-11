@@ -3,16 +3,28 @@
 #include <map>
 #include <string>
 
+void PrintAll(std::map<std::string, int>& m) {
+	for (auto i : m) {
+		std::cout << i.first << ": " << i.second << "\n";
+	}
+	printf("====\n");
+}
+
 int main() {
 	std::map<std::string, int> m;
 
-	m["marine"] = 40;
+	m["marine"] = 70;
+	m["marine"] = 40;		//갱신이 된다. 
 //	std::cout << m["marine"];
 	m.insert(std::make_pair("firebat", 50));
+	m.insert(std::make_pair("firebat", 60));	//갱신이 안된다. 
 
-	for (auto i : m) {
-		std::cout << i.first <<": "<< i.second << "\n";
-	}
+	PrintAll(m);
+
+	m.erase("firebat");
+	m.erase("teemo");
+
+	PrintAll(m);
 
 	return 0;
 }

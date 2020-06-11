@@ -69,5 +69,8 @@
     <ClCompile Include="map, unorderd_map_200610.cpp">
       <Filter>소스 파일\근원적인C++</Filter>
     </ClCompile>
+    <ClCompile Include="set, unorderd_set, multiset_200612.cpp">
+      <Filter>소스 파일\근원적인C++</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
