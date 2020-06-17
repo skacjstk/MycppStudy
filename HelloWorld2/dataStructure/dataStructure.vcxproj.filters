@@ -81,5 +81,8 @@
     <ClCompile Include="shared_pointer_200616.cpp">
       <Filter>소스 파일\근원적인C++</Filter>
     </ClCompile>
+    <ClCompile Include="week_ptr_200617.cpp">
+      <Filter>소스 파일\근원적인C++</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

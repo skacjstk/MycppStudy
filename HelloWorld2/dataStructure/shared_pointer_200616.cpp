@@ -3,6 +3,65 @@
 #include <string>
 #include <vector>
 
+class Player : public std::enable_shared_from_this<Player> {
+private:
+	std::string name;
+	int * testData;
+public:
+	Player() {
+		testData = new int[5];
+		std::cout <<  "생성자 호출\n";
+	}
+	~Player() {
+		std::cout << "포인터 소멸자 호출\n";
+		delete[] testData;
+	}
+	// 이걸 사용할 경우 이전과 같은 메모리 오류 발생
+	 //std::shared_ptr<Player> get_shared_ptr() { return std::shared_ptr<Player>(this); }
+
+	std::shared_ptr<Player> get_shared_ptr() { return shared_from_this(); }
+};
+int main(void) {
+
+	std::shared_ptr <Player> pp1 = std::make_shared<Player>();
+	//	std::shared_ptr <Player> pp2 = std::make_shared<Player>();
+	std::shared_ptr <Player> pp2 = pp1->get_shared_ptr();
+
+	std::cout << pp1.use_count() << "\t" << pp2.use_count() << "\n";
+	std::cout << "종료\n";
+	return 0;
+}
+/*
+class Player : public std::enable_shared_from_this<Player> {
+private:
+	std::string name;
+	int * testData;
+public:
+	Player() {
+		testData = new int[5];
+		std::cout <<  "생성자 호출\n";
+	}
+	~Player() {
+		std::cout << "포인터 소멸자 호출\n";
+		delete[] testData;
+	}
+	// 이걸 사용할 경우 이전과 같은 메모리 오류 발생
+	 //std::shared_ptr<Player> get_shared_ptr() { return std::shared_ptr<Player>(this); }
+
+	std::shared_ptr<Player> get_shared_ptr() { return shared_from_this(); }
+};
+int main(void) {
+
+	std::shared_ptr <Player> pp1 = std::make_shared<Player>();
+	//	std::shared_ptr <Player> pp2 = std::make_shared<Player>();
+	std::shared_ptr <Player> pp2 = pp1->get_shared_ptr();
+
+	std::cout << pp1.use_count() << "\t" << pp2.use_count() << "\n";
+	std::cout << "종료\n";
+	return 0;
+}
+*/
+/*
 class Player {
 private:
 	std::string name;
@@ -62,9 +121,11 @@ int main(void) {
 	return 0;
 }
 
-
+*/
 /*
-class Player {
+
+//변경점: Player 객체가 enable... 을 상속받았다.
+class Player : public std::enable_shared_from_this<Player> {
 private:
 	std::string name;
 	int * testData;
@@ -81,15 +142,20 @@ public:
 		std::cout << "포인터 소멸자 호출\n";
 		delete [] testData;
 	}
+   // 이걸 사용할 경우 이전과 같은 메모리 오류 발생
+   // std::shared_ptr<Player> get_shared_ptr() { return std::shared_ptr<Player>(this); }
+
+  std::shared_ptr<Player> get_shared_ptr() { return shared_from_this(); }
 };
 int main(void){
 	Player* pp = new Player("pp");
 	std::shared_ptr <Player> pp1 = std::make_shared<Player>(pp);
-	std::shared_ptr <Player> pp2 = std::make_shared<Player>(pp);
+//	std::shared_ptr <Player> pp2 = std::make_shared<Player>(pp);
+	std::shared_ptr <Player> pp2 = pp1->get_shared_ptr();
 
 	std::cout << pp1.use_count() << "\t" << pp2.use_count()<<"\n";
-
 	std::cout << "종료\n";
+	return 0;
 }
 */
 //https://modoocode.com/252
