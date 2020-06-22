@@ -156,7 +156,7 @@
     <ClCompile Include="map, unorderd_map_200610.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="move_constructor.cpp" />
+    <ClCompile Include="move_constructor_200622.cpp" />
     <ClCompile Include="nullptr_200608.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>

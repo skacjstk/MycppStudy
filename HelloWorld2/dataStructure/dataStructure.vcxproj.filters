@@ -84,7 +84,7 @@
     <ClCompile Include="week_ptr_200617.cpp">
       <Filter>소스 파일\근원적인C++</Filter>
     </ClCompile>
-    <ClCompile Include="move_constructor.cpp">
+    <ClCompile Include="move_constructor_200622.cpp">
       <Filter>소스 파일\근원적인C++</Filter>
     </ClCompile>
   </ItemGroup>
