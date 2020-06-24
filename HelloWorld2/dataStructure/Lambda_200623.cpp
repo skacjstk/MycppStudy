@@ -25,7 +25,7 @@ int main(void)
 	{std::cout << i << testEl<<"\n"; total_elements *= i; });
 	cout << "total elements : " << total_elements << endl;
 
-	//람다의 캡처절 [] 은 변수명 지정 안하면 개체범위 접근이고 가져오면 const 붙고 
+	//람다의 캡처절 [] 은 변수명 지정 안하면 개체범위접근이고 가져오면 const 붙고 
 
 	vector<int> stuff;
 	fill(stuff, [&stuff]() -> bool { return stuff.size() >= 8; });
