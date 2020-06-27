@@ -93,5 +93,8 @@
     <ClCompile Include="constexpr_study_200625.cpp">
       <Filter>소스 파일\근원적인C++</Filter>
     </ClCompile>
+    <ClCompile Include="variableArgument_200627.cpp">
+      <Filter>소스 파일\근원적인C++</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
