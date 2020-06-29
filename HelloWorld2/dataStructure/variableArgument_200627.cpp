@@ -17,3 +17,25 @@ int main() {
 
 	return 0;
 }
+
+/*
+#include <iostream>
+
+template <typename T>
+void Print(T arg) {
+  std::cout << arg << "\n";
+}
+
+template <typename T, typename... Types>
+void Print(T arg, Types... args) {
+  std::cout << arg << ", ";
+  print(args...);
+}
+
+int main() {
+	 Print(1, 2.3, "string");
+	 Print(1, 2, 3, 4, 5);
+
+	return 0;
+}
+*/
