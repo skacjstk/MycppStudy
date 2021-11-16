@@ -1,0 +1,14 @@
+C++ 코드 테스트 기본식
+#include <iostream>
+int main(void)
+{
+ std::cout << "hello world";
+return 0:
+}
+
+
+DP
+	점화식 찾기는 노가다.
+	탑다운(재귀), 바텀 업(반복문) 이니까 
+15649번~15655번 N과 M 문제로 참고
+바텀 업은 11726, 9095번
