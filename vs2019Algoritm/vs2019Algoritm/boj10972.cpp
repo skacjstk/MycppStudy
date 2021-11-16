@@ -16,7 +16,7 @@ int main() {
     for (int i = 0; i < n; ++i) {
         cin >> number[i];
     }
-
+        //이전 순열은 prev_permutation
     if (next_permutation(number.begin(), number.end())) {
         for (int i = 0; i < n; ++i) {
             cout << number[i] << " ";
