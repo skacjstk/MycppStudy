@@ -16,6 +16,15 @@
     <Filter Include="소스 파일\permutation">
       <UniqueIdentifier>{db673d82-0ec0-48f6-9a48-c44e5c8f8abc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\recursion">
+      <UniqueIdentifier>{c04f2450-3be4-4587-b1bd-95295f1dee23}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\DP">
+      <UniqueIdentifier>{47951638-2564-4247-8a3e-73c09545634d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\BFS">
+      <UniqueIdentifier>{d67bb1c1-d78c-4c71-8257-aa3f8e82cf57}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="algoTest.cpp">
@@ -41,6 +50,33 @@
     </ClCompile>
     <ClCompile Include="boj10972.cpp">
       <Filter>소스 파일\permutation</Filter>
+    </ClCompile>
+    <ClCompile Include="boj10974.cpp">
+      <Filter>소스 파일\permutation</Filter>
+    </ClCompile>
+    <ClCompile Include="boj10819.cpp">
+      <Filter>소스 파일\permutation</Filter>
+    </ClCompile>
+    <ClCompile Include="boj9095_DP.cpp">
+      <Filter>소스 파일\recursion</Filter>
+    </ClCompile>
+    <ClCompile Include="boj11726.cpp">
+      <Filter>소스 파일\DP</Filter>
+    </ClCompile>
+    <ClCompile Include="boj1149.cpp">
+      <Filter>소스 파일\DP</Filter>
+    </ClCompile>
+    <ClCompile Include="boj11055.cpp">
+      <Filter>소스 파일\DP</Filter>
+    </ClCompile>
+    <ClCompile Include="boj1697.cpp">
+      <Filter>소스 파일\BFS</Filter>
+    </ClCompile>
+    <ClCompile Include="source.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="boj13913.cpp">
+      <Filter>소스 파일\BFS</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
