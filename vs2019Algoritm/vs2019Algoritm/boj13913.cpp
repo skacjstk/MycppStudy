@@ -13,7 +13,7 @@ queue<pair<int, int>> nodes;
 vector<int> path;
 
 bool validCheck(const int& num) {
-	if (num > MAX-1 || num < 0 || visited[num] != -1 )
+	if (num > MAX - 1 || num < 0 || visited[num] != -1)
 		return false;
 	return true;
 }
@@ -117,5 +117,5 @@ int main(void)
 1차수정: pair로 교체, 기존 spendTime 개별배열은 뭔가 숫자가 더해짐
 2차수정: validCheck 조건을 visited를 먼저 보지 말고, num의 유효성을 먼저 검사하면 된다.
 
-3차수정: visited를 int형으로 바꾸고, -1로 초기화했다. 
+3차수정: visited를 int형으로 바꾸고, -1로 초기화했다. 이전 방문 위치를 저장한다
 */
