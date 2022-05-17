@@ -25,6 +25,12 @@
     <Filter Include="소스 파일\BFS">
       <UniqueIdentifier>{d67bb1c1-d78c-4c71-8257-aa3f8e82cf57}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\BitMask">
+      <UniqueIdentifier>{252f198b-cff7-4289-ba65-d4a430aa62e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Graph">
+      <UniqueIdentifier>{0ec3f922-ef85-473b-b949-0e9cad080010}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="algoTest.cpp">
@@ -72,11 +78,17 @@
     <ClCompile Include="boj1697.cpp">
       <Filter>소스 파일\BFS</Filter>
     </ClCompile>
-    <ClCompile Include="source.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="boj13913.cpp">
       <Filter>소스 파일\BFS</Filter>
+    </ClCompile>
+    <ClCompile Include="boj11723.cpp">
+      <Filter>소스 파일\BitMask</Filter>
+    </ClCompile>
+    <ClCompile Include="boj13023.cpp">
+      <Filter>소스 파일\Graph</Filter>
+    </ClCompile>
+    <ClCompile Include="boj16947.cpp">
+      <Filter>소스 파일\Graph</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
