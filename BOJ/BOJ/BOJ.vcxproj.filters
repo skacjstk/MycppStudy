@@ -43,6 +43,9 @@
     <Filter Include="소스 파일\문자열 처리\KMP">
       <UniqueIdentifier>{d78b4021-44e8-43c1-991a-86dc97179f3a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\비트마스크">
+      <UniqueIdentifier>{8a807c50-099b-45f6-b3c5-41a824627721}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BOJ_10989_수 정렬하기 3.cpp">
@@ -161,6 +164,9 @@
     </ClCompile>
     <ClCompile Include="BOJ5622_문자열 처리_다이얼_200527.cpp">
       <Filter>소스 파일\문자열 처리</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_14225번_부분수열의_합.cpp">
+      <Filter>소스 파일\비트마스크</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
