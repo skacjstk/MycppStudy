@@ -10,8 +10,8 @@ int N, K;	// N은 단어 갯수, K는 알파벳을를 읽을 수 있는 수
 int answer = 0;
 
 // 한 문자열에서 한글자씩 단어를 읽어내는 함수
-// currentReadAlphabet: 현재까지 읽은 알파벳의 수를 의미합니다. K보다 클 수 없습니다.
-// currentReadWord: 현재까지 읽은 단어의 수, 마지막 단어를 읽고나면 
+// currentReadAlphabet: 현재까지 읽은 알파벳의 수를 K보다 클 수 없습니다.
+// currentReadWord: 현재까지 읽은 단어의 수, words를 다 탐색하면 answer를 갱신하게 됩니다.
 // depth: DFS 깊이를 의미합니다. 현재는 words 벡터의 index로 사용됩니다.
 void DFS(int currentReadAlphabet, int currentReadWord, int depth)
 {
@@ -24,22 +24,28 @@ void DFS(int currentReadAlphabet, int currentReadWord, int depth)
 	// 단어 읽기
 	std::vector<int> readableAlphabetIndex;	// 한꺼번에 읽게 하기
 	bool successRead = true;	// 읽기 성공했는지 확인하는 flag 변수
+	int readalphaBet = 0;	// 백트래킹: 단어읽기를 중간에 실패할 경우, 
+									//매개변수 currentAlphabet을 되돌리기 위한 변수
+
+
 	for (int i = 0; i < words[depth].size(); ++i) {		
-		// bool 비트를 마스킹했을 때, 뭐가 나오면 새로배우는 단어
+		// bool 비트를 마스킹했을 때, false 나오면 새로배워야 할 알파벳
 		bool newBet = alphabet[words[depth][i] - 'a'] & true;
-		if (newBet == false)	//AND 연산으로 false가 나오면 배운적 없는 단어
+		if (newBet == false)	//AND 연산으로 false가 나오면 배운적 없는 알파벳
 		{
-			// 1. 나중에 true 변화시킬 index를 가져오기
+			// 1. 새로 배운 단어의 index를 저장하기. 읽기 성공시 DFS 직전에 alphabet[] 을 변경
 			readableAlphabetIndex.push_back((int)(words[depth][i] - 'a'));
-			alphabet[words[depth][i] - 'a'] = true;	// 이거 실패시 false로 바꿔줘야 함.
-			// 2. currentReadAlphabet을 1 더하기, 알파벳을 하나 더 읽은 것
+//			alphabet[words[depth][i] - 'a'] = true;	// 이거 실패시 false로 바꿔줘야 함.
+			// 1. readalphaBet을 1 더하기, 알파벳을 하나 더 읽은 것
 			++currentReadAlphabet;
 			// 3. 읽을 수 있는 단어의 갯수를 초과하면, 단어 읽기 실패, 반복문 중단
 			if (currentReadAlphabet > K)
 			{
 				successRead = false;	// 이 단어는 읽기 실패한 것
+				currentReadAlphabet -= readalphaBet;	// 읽은 알파뱃 수 복원
 				break;
 			}
+			++readalphaBet;	// 
 		}
 	}	// endfor
 
@@ -57,7 +63,7 @@ void DFS(int currentReadAlphabet, int currentReadWord, int depth)
 	for (int& it : readableAlphabetIndex) {
 		alphabet[it] = false;	// 이제 단어 안읽은거임
 	}
-	DFS(currentReadAlphabet, currentReadWord, depth + 1);
+	DFS(currentReadAlphabet - readalphaBet, currentReadWord, depth + 1);
 }
 
 void Solution() {
