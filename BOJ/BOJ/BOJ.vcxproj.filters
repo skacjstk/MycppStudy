@@ -168,5 +168,8 @@
     <ClCompile Include="BOJ_14225번_부분수열의_합.cpp">
       <Filter>소스 파일\비트마스크</Filter>
     </ClCompile>
+    <ClCompile Include="BOJ_1062번_가르침.cpp">
+      <Filter>소스 파일\비트마스크</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
