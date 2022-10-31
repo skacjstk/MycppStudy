@@ -46,6 +46,9 @@
     <Filter Include="소스 파일\비트마스크">
       <UniqueIdentifier>{8a807c50-099b-45f6-b3c5-41a824627721}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\그리디">
+      <UniqueIdentifier>{a4aeca13-d099-40e3-b641-084868e3f9d6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BOJ_10989_수 정렬하기 3.cpp">
@@ -170,6 +173,15 @@
     </ClCompile>
     <ClCompile Include="BOJ_1062번_가르침.cpp">
       <Filter>소스 파일\비트마스크</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_13460번_구슬 탈출 2.cpp">
+      <Filter>소스 파일\비트마스크</Filter>
+    </ClCompile>
+    <ClCompile Include="CodeTest.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_1339_단어_수학.cpp">
+      <Filter>소스 파일\그리디</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
