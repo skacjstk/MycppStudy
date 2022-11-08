@@ -46,7 +46,7 @@
     <Filter Include="소스 파일\비트마스크">
       <UniqueIdentifier>{8a807c50-099b-45f6-b3c5-41a824627721}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\그리디">
+    <Filter Include="소스 파일\그리디%28DFS,BFS포함%29">
       <UniqueIdentifier>{a4aeca13-d099-40e3-b641-084868e3f9d6}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -181,7 +181,10 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="BOJ_1339_단어_수학.cpp">
-      <Filter>소스 파일\그리디</Filter>
+      <Filter>소스 파일\그리디%28DFS,BFS포함%29</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_14888_연산자 끼워넣기.cpp">
+      <Filter>소스 파일\그리디%28DFS,BFS포함%29</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
