@@ -17,13 +17,12 @@ void DFS(int index, int currentDepth)
 	{
 		int start = 0;
 		int link = 0; // 점수 총합
-		std::vector<int> startList;
-		std::vector<int> linkList;
+		 
 		for (int i = 0; i < matrixNum ; i++)
 		{
 			for (int j = 0; j < matrixNum; j++)
 			{
-				// 둘이 
+				// 둘이 같은 팀에 속했을 때, 추가점수를 받는다 ( 반복문 상 ij ji 를 한번씩 검출되는 셈 )
 				if (visited[i] == true && visited[j] == true) start += matrix[i][j];
 				if (visited[i] == false && visited[j] == false) link += matrix[i][j];
 
@@ -50,14 +49,14 @@ void DFS(int index, int currentDepth)
 int main(void)
 {	
 	// 1. 가능한 수 구하기
-//	std::cin >> matrixNum;
-//
-//	// 2. 2중 반복문으로 배열 채우기 (행렬구현 귀찮...)
-//	for (int i = 0; i < matrixNum; ++i) {
-//		for (int k = 0; k < matrixNum; ++k) {
-//			std::cin >> matrix[i][k];
-//		}
-//	}
+	std::cin >> matrixNum;
+
+	// 2. 2중 반복문으로 배열 채우기 (행렬구현 귀찮...)
+	for (int i = 0; i < matrixNum; ++i) {
+		for (int k = 0; k < matrixNum; ++k) {
+			std::cin >> matrix[i][k];
+		}
+	}
 
 	// 자동 테스트
 	matrixNum = 4;
