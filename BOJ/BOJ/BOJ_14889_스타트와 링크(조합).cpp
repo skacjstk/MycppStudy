@@ -28,7 +28,7 @@ void DFS(int index, int currentDepth)
 
 			}
 		}
-		printf("삽입 전 검사: %d\n", result);
+//		printf("삽입 전 검사: %d\n", result);
 		result = std::min(result, std::abs(start - link));	// 최솟값 넣기
 		return;
 	}
@@ -59,18 +59,18 @@ int main(void)
 	}
 
 	// 자동 테스트
-	matrixNum = 4;
-	int test[16] = { 0, 1, 2, 3,
-					4, 0, 5, 6,
-					7, 1, 0, 2,
-					3, 4, 5, 0 };
-
-	int testIndex = 0;
-	for (int i = 0; i < matrixNum; ++i) {
-		for (int k = 0; k < matrixNum; ++k) {
-			matrix[i][k] = test[testIndex++];
-		}
-	}
+//	matrixNum = 4;
+//	int test[16] = { 0, 1, 2, 3,
+//					4, 0, 5, 6,
+//					7, 1, 0, 2,
+//					3, 4, 5, 0 };
+//
+//	int testIndex = 0;
+//	for (int i = 0; i < matrixNum; ++i) {
+//		for (int k = 0; k < matrixNum; ++k) {
+//			matrix[i][k] = test[testIndex++];
+//		}
+//	}
 
 
 	// 3. N명중 N/2명을 구하는 조합을 찾고, 팀을 나눴을 때
