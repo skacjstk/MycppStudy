@@ -189,5 +189,8 @@
     <ClCompile Include="BOJ_14889_스타트와 링크(조합).cpp">
       <Filter>소스 파일\그리디%28DFS,BFS포함%29</Filter>
     </ClCompile>
+    <ClCompile Include="BOJ_6603_로또.cpp">
+      <Filter>소스 파일\그리디%28DFS,BFS포함%29</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
