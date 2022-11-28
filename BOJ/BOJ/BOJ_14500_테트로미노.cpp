@@ -1,10 +1,13 @@
 #include <iostream>
 #include <vector>
+#define TETROSIZE maxDepth 
 
 std::vector<std::vector<int>> arr;	// 이중 벡터(배열, 종이 크기) 
 std::vector<std::vector<bool>> visited;	// 방문 검사할 
 
 int N, M;
+
+int maxDepth = 4;
 
 int dx[] = { -1,1,0,0 };		// x축 왼쪽, 오른쪽
 int dy[] = { 0,0,-1,1 };		// y축 위, 아래
@@ -24,7 +27,7 @@ void DFS(int x, int y, int sum, int depth)
 {
 
 	// 0, 1, 2, 3 탐색하고 4되면 반환
-	if (depth >= N) {
+	if (depth >= TETROSIZE) {
 //		printf("깊이:%d \t값: %d %d\n", depth, sum, result);
 		result = std::max(result, sum);
 		return;
@@ -42,9 +45,8 @@ void DFS(int x, int y, int sum, int depth)
 			if (!visited[newY][newX]) {
 				visited[newY][newX] = true;
 
-				sum = sum + arr[newY][newX];	// 해당 위치 덧셈하기
-				DFS(newX, newY, sum, depth + 1);
-				sum = sum - arr[newY][newX];	// 방문 하고 왔으니까 빼야지 
+				//	덧셈이 이 for 내부에서 저장되는걸 막기 위해 인자로 같이 전달
+				DFS(newX, newY, sum + arr[newY][newX], depth + 1);
 				visited[newY][newX] = false;
 			}//endif
 		}//endfor
@@ -60,6 +62,7 @@ void CheckOtherShape(int x, int y)
 
 	// 4번 돌때 
 	for(int k = 0; k < 4; ++k){	// 경우의 수
+		isValid = true;	// 이게 유지되면 유효한 범위
 		int sum = 0;	// 합
 		for (int i = 0; i < 4; ++i) {	// 값
 			int newX = x + ox[k][i];
