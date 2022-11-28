@@ -74,7 +74,8 @@ int main(void)
 	std::cin >> operatorCount[0] >> operatorCount[1] >> operatorCount[2] >> operatorCount[3];
 
 	// 탐색 시작
-	DFS(0, 0, 0);
+	DFS(0, 0, 0);	// 이게 되는 이유: depth가 0부터임 (depth 1이 본격적인 탐색)
+					// 그리고 이는 첫번째 숫자를 배치하는 것과 같음
 	std::cout << maxResult << std::endl << minResult;
 
 	return 0;

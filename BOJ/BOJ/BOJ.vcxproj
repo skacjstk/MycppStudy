@@ -319,7 +319,10 @@
     <ClCompile Include="BOJ_14889_스타트와 링크(조합).cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="BOJ_6603_로또.cpp" />
+    <ClCompile Include="BOJ_15658번_연산자 끼워넣기 2.cpp" />
+    <ClCompile Include="BOJ_6603_로또.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="CodeTest.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>

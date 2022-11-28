@@ -192,5 +192,8 @@
     <ClCompile Include="BOJ_6603_로또.cpp">
       <Filter>소스 파일\그리디%28DFS,BFS포함%29</Filter>
     </ClCompile>
+    <ClCompile Include="BOJ_15658번_연산자 끼워넣기 2.cpp">
+      <Filter>소스 파일\그리디%28DFS,BFS포함%29</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
