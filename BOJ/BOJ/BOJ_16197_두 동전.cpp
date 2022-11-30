@@ -21,10 +21,13 @@ bool IsCoinFall(int &x, int &y) {
 	return false;
 }
 
-bool IsBlocking(int& x, int& y) {
-	if (arr[y][x] == '#') return true;
-	return false;
+// 0 = 떨어지는 위치, 1 = 블로킹 위치, 2 = 정상 이동 가능
+int IsBlocking(int& x, int& y) {
+	if (IsCoinFall(x, y))
+		return 0;
 
+	else if (arr[y][x] == '#') return 1;
+	return 2;
 }
 
 // 1번동전 좌표, 2번동전 좌표, 현재 깊이
@@ -61,21 +64,32 @@ void DFS(int x1, int y1, int x2, int y2, int depth)
 					int nX = x1 + dx[i];
 					int nY = y1 + dy[i];
 
-					if (IsBlocking(nY, nX)) {
+
+					// 0 = 떨어지는 위치, 1 = 블로킹 위치, 2 = 정상 이동 가능
+
+					switch (IsBlocking(nX, nY)) {
+					case 1:
 						nX = x1;
 						nY = y1;
+						break;
 					}
 
 					int nnX = x2 + dx[i];
 					int nnY = y2 + dy[i]; 
 
-					if (IsBlocking(nnY, nnX)) {
+					switch (IsBlocking(nnX, nnY)) {
+					case 1:
 						nnX = x2;
 						nnY = y2;
+						break;
 					}
 
 					// 최종적으로 결정된 다음 위치를 전송하기
-					DFS(nX, nY, nnX, nnY, depth + 1);					
+					DFS(nX, nY, nnX, nnY, depth + 1);	
+					// 
+
+
+
 				}//endfor
 				break;
 		}//end switch
