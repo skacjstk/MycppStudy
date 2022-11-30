@@ -37,62 +37,56 @@ void DFS(int x1, int y1, int x2, int y2, int depth)
 	if (depth >= maxDepth)
 		return;
 	else
-	{		
-		int coinFall = 0;
-		if (IsCoinFall(x1, y1))
-		{
-			++coinFall;
-		}
-		if (IsCoinFall(x2, y2))
-		{
-			++coinFall;
-		}
+	{	
+		for (int i = 0; i < 4; ++i) {
+			int nX = x1 + dx[i];
+			int nY = y1 + dy[i];
 
-		// 둘 다 떨어졌다면 실패
-		switch(coinFall)
-		{
-			case 2: // 더 볼것도 없다
-				return;
-			case 1:	// 자신의 depth를 result에 기록한 뒤 return
-				result = std::min(result, depth);
-				return;
-				// 코인이 하나도 안떨어졌다면
+			int coinFall = 0;
+
+			// 다음 진행 위치에 대한 예측
+			// 0 = 떨어지는 위치, 1 = 블로킹 위치, 2 = 정상 이동 가능
+			switch (IsBlocking(nX, nY)) {
 			case 0:
-				// 여기서 새로운 4방 DFS 를 수행
-
-				for (int i = 0; i < 4; ++i) {
-					int nX = x1 + dx[i];
-					int nY = y1 + dy[i];
-
-
-					// 0 = 떨어지는 위치, 1 = 블로킹 위치, 2 = 정상 이동 가능
-
-					switch (IsBlocking(nX, nY)) {
-					case 1:
-						nX = x1;
-						nY = y1;
-						break;
-					}
-
-					int nnX = x2 + dx[i];
-					int nnY = y2 + dy[i]; 
-
-					switch (IsBlocking(nnX, nnY)) {
-					case 1:
-						nnX = x2;
-						nnY = y2;
-						break;
-					}
-
-					// 최종적으로 결정된 다음 위치를 전송하기
-					DFS(nX, nY, nnX, nnY, depth + 1);	
-					// 
-
-
-
-				}//endfor
+				coinFall++;
 				break;
-		}//end switch
+			case 1:
+				nX = x1;
+				nY = y1;
+				break;
+			}
+
+			int nnX = x2 + dx[i];
+			int nnY = y2 + dy[i];
+
+			switch (IsBlocking(nnX, nnY)) {
+			case 0:
+				coinFall++;
+				break;
+			case 1:
+				nnX = x2;
+				nnY = y2;
+				break;
+			}
+
+			// 둘다 떨어지면 이 경우의 수 폐기
+			switch (coinFall)
+			{
+			case 0:
+				break;
+			case 1:
+				result = std::min(result, depth + 1);
+				continue;
+			case 2:
+				continue;
+			}
+			if (coinFall == 2) {
+				continue;
+			}
+
+			// 결정된 새 위치로 DFS 수행하기
+			DFS(nX, nY, nnX, nnY, depth + 1);
+		}
 	}
 }
 
