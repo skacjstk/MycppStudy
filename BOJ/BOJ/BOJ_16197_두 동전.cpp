@@ -2,7 +2,7 @@
 #include <vector>
 
 std::vector<std::vector<char>> arr;	// 이중 벡터(배열, 종이 크기) 
-std::vector<std::vector<bool>> visited;	// 방문 검사할 -> 필요 없나?
+// 방문검사 취소: 무한반복도 depth 10에서 끝남
 
 int N, M;
 
@@ -10,91 +10,76 @@ int dx[] = { -1,1,0,0 };		// x축 왼쪽, 오른쪽
 int dy[] = { 0,0,-1,1 };		// y축 위, 아래
 
 int maxDepth = 10;
-
-// 필요 할까??
-// 코인의 y 좌표
-int coinY[2];
-// 코인의 x 좌표
-int coinX[2];
-
-
-
+std::vector<std::pair<int, int>> coinDir;
 
 int result = 9999;	// 최대값을 넣야아 함
 
+// 
+bool IsCoinFall(int &x, int &y) {
 
-// 동전 떨어진 갯수, 깊이
-void DFS(int fallCoinNum, int depth)
+	if (x < 0 || x >= M || y < 0 || y >= N) return true;
+	return false;
+}
+
+bool IsBlocking(int& x, int& y) {
+	if (arr[y][x] == '#') return true;
+	return false;
+
+}
+
+// 1번동전 좌표, 2번동전 좌표, 현재 깊이
+void DFS(int x1, int y1, int x2, int y2, int depth)
 {
-	// 이쪽은 실패한거임 10번 초과 시도하거나, 한번에 두개가 떨어졌으니까
-	if (depth >= maxDepth || fallCoinNum == 2) {
+	// 깊이 초과 10번까진 괜찮은데 11번부터 안돼 (index 0 ~ 9)
+	if (depth >= maxDepth)
 		return;
+	else
+	{		
+		int coinFall = 0;
+		if (IsCoinFall(x1, y1))
+		{
+			++coinFall;
+		}
+		if (IsCoinFall(x2, y2))
+		{
+			++coinFall;
+		}
+
+		// 둘 다 떨어졌다면 실패
+		switch(coinFall)
+		{
+			case 2: // 더 볼것도 없다
+				return;
+			case 1:	// 자신의 depth를 result에 기록한 뒤 return
+				result = std::min(result, depth);
+				return;
+				// 코인이 하나도 안떨어졌다면
+			case 0:
+				// 여기서 새로운 4방 DFS 를 수행
+
+				for (int i = 0; i < 4; ++i) {
+					int nX = x1 + dx[i];
+					int nY = y1 + dy[i];
+
+					if (IsBlocking(nY, nX)) {
+						nX = x1;
+						nY = y1;
+					}
+
+					int nnX = x2 + dx[i];
+					int nnY = y2 + dy[i]; 
+
+					if (IsBlocking(nnY, nnX)) {
+						nnX = x2;
+						nnY = y2;
+					}
+
+					// 최종적으로 결정된 다음 위치를 전송하기
+					DFS(nX, nY, nnX, nnY, depth + 1);					
+				}//endfor
+				break;
+		}//end switch
 	}
-	else if (fallCoinNum == 1) {
-		result = std::min(result, depth);
-	}
-	// 실질적인 DFS 수행 부
-	else {
-
-		// 코인 이전 위치( 여기 들어왔을 때 위치 )
-		int beforeX[2];
-		int beforeY[2];
-
-		// 이전 위치 기록 (무조건 해야 함)
-		beforeX[0] = coinX[0];
-		beforeY[0] = coinY[0];
-
-		beforeX[1] = coinX[1];
-		beforeY[1] = coinY[1];
-
-		// 4방향으로 이동 시도
-		for (int i = 0; i < 4; ++i) {
-			// 검사용 코인 위치
-			int newX;
-			int newY;
-
-			// 확정된 새 코인 위치
-			int newCoinY[2];
-			int newCoinX[2];
-
-			// k번 코인의 새 위치
-			for (int k = 0; k < 2; ++k) {
-				newX = coinX[k] + dx[i];
-				newY = coinY[k] + dy[i];
-				
-
-				// 떨어진 경우
-				if (newX < 0 || newX >= M || newY < 0 || newY >= N) {
-					++fallCoinNum;	// 떨어진 코인 수 증가
-					continue;
-				}
-				else if (arr[newY][newX] == '#')
-					continue;
-				// 성공: 2가지 경우의 수 검사
-				else
-				{
-					// 코인 새 위치 기록
-					newCoinX[k] = newX;
-					newCoinY[k] = newY;
-
-					// 코인 새 위치 반영 ( 범위 벗어나도 상관없다 {위험하긴 하다} )
-					coinX[k] = newX;
-					coinY[k] = newY;
-				}//endif
-
-
-			} //end for
-
-
-			// 새 위치로 옮기기는 했음.
-			DFS(fallCoinNum, depth + 1);
-			coinX[0] = beforeX[0];
-			coinY[0] = beforeY[0];
-
-			coinX[1] = beforeX[1];
-			coinY[1] = beforeY[1];
-		}//endfor
-	}//endif
 }
 
 int main(void)
@@ -102,10 +87,8 @@ int main(void)
 	std::cin >> N >> M;
 
 	arr.resize(N);
-	visited.resize(N);
 	for (int i = 0; i < N; ++i) {
 		arr[i].resize(M);
-		visited[i].resize(M);
 	}
 	// 2차원 배열 크기할당
 	char pin;
@@ -119,16 +102,16 @@ int main(void)
 
 			// 코인 위치 기록
 			if (arr[i][j] == 'o') {
-				coinY[coinNum] = i;
-				coinX[coinNum] = j;
-				coinNum++;
+				coinDir.push_back(std::make_pair(j,i));
 			}
 		}
 	}
 
-	// 입력 다받았으면 동전 각 Move에 따른 동전의 위치를 계산해야 한다.
-
-	DFS(0, 0);	// 10번 초과니까 첫 시도를 0로 해 10번째에서 시도조차 못하게 걸러야 함
+	DFS(coinDir[0].first, 
+		coinDir[0].second,
+		coinDir[1].first,
+		coinDir[1].second,
+		0);
 	
 	// 어떤 경우도 성공하지 못한다면 -1로 바꿈
 	if (result == 9999)
