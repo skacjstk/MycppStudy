@@ -46,8 +46,23 @@
     <Filter Include="소스 파일\비트마스크">
       <UniqueIdentifier>{8a807c50-099b-45f6-b3c5-41a824627721}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\그리디%28DFS,BFS포함%29">
+    <Filter Include="소스 파일\그래프">
       <UniqueIdentifier>{a4aeca13-d099-40e3-b641-084868e3f9d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\그리디">
+      <UniqueIdentifier>{e0ab8410-13ab-4488-8c18-795cd8e7096d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\정렬">
+      <UniqueIdentifier>{323aecd6-4a20-4027-970f-127da68269af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\탐색">
+      <UniqueIdentifier>{f444b6f4-c0ba-4fa5-a249-350e3c9bdb81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\DP">
+      <UniqueIdentifier>{44600b00-eb00-4d46-b19b-e161626f2af9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\플로이드 와샬">
+      <UniqueIdentifier>{59d50f3f-b797-4254-b4d8-c12cfa4c4089}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -181,28 +196,76 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="BOJ_1339_단어_수학.cpp">
-      <Filter>소스 파일\그리디%28DFS,BFS포함%29</Filter>
+      <Filter>소스 파일\그래프</Filter>
     </ClCompile>
     <ClCompile Include="BOJ_14888_연산자 끼워넣기.cpp">
-      <Filter>소스 파일\그리디%28DFS,BFS포함%29</Filter>
+      <Filter>소스 파일\그래프</Filter>
     </ClCompile>
     <ClCompile Include="BOJ_14889_스타트와 링크(조합).cpp">
-      <Filter>소스 파일\그리디%28DFS,BFS포함%29</Filter>
+      <Filter>소스 파일\그래프</Filter>
     </ClCompile>
     <ClCompile Include="BOJ_6603_로또.cpp">
-      <Filter>소스 파일\그리디%28DFS,BFS포함%29</Filter>
+      <Filter>소스 파일\그래프</Filter>
     </ClCompile>
     <ClCompile Include="BOJ_15658번_연산자 끼워넣기 2.cpp">
-      <Filter>소스 파일\그리디%28DFS,BFS포함%29</Filter>
+      <Filter>소스 파일\그래프</Filter>
     </ClCompile>
     <ClCompile Include="BOJ_14500_테트로미노.cpp">
-      <Filter>소스 파일\그리디%28DFS,BFS포함%29</Filter>
+      <Filter>소스 파일\그래프</Filter>
     </ClCompile>
     <ClCompile Include="BOJ_16197_두 동전.cpp">
-      <Filter>소스 파일\그리디%28DFS,BFS포함%29</Filter>
+      <Filter>소스 파일\그래프</Filter>
     </ClCompile>
     <ClCompile Include="BOJ_9663_N-Queen.cpp">
-      <Filter>소스 파일\그리디%28DFS,BFS포함%29</Filter>
+      <Filter>소스 파일\그래프</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_1865_블랙홀.cpp">
+      <Filter>소스 파일\그래프</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_11404_플로이드.cpp">
+      <Filter>소스 파일\그래프</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_1389_케빈베이컨의6단계.cpp">
+      <Filter>소스 파일\그래프</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_1948_임계경로.cpp">
+      <Filter>소스 파일\그래프</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_11657_타임머신.cpp">
+      <Filter>소스 파일\그래프</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_2075_N번째 큰 수.cpp">
+      <Filter>소스 파일\정렬</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_16498_작은 벌점.cpp">
+      <Filter>소스 파일\이분 탐색</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ3967_매직스타.cpp">
+      <Filter>소스 파일\탐색</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ1052_물병.cpp">
+      <Filter>소스 파일\그리디</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_9549_암호화된 비밀번호.cpp">
+      <Filter>소스 파일\정렬</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_22869_징검다리 건너기.cpp">
+      <Filter>소스 파일\DP</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_2579_계단오르기.cpp">
+      <Filter>소스 파일\DP</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_11053_가장 긴 증가하는 부분 수열.cpp">
+      <Filter>소스 파일\DP</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_11403_경로찾기.cpp">
+      <Filter>소스 파일\플로이드 와샬</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_8312_Rectangles 2.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="BOJ_1912_연속합.cpp">
+      <Filter>소스 파일\DP</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
