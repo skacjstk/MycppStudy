@@ -32,9 +32,8 @@ bool CheckDay(int year, int month, int day)
 	case 2:	// ¥Î∏¡¿« ¿±≥‚
 	{
 		bool IsLeapYear = false;
-		if (year % 400 == 0 && year % 100 != 0 && year % 4 == 0)
+		if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0)
 			IsLeapYear = true;
-
 		if (IsLeapYear == true)
 			return day <= 29;
 		else
