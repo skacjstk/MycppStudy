@@ -25,8 +25,6 @@ void Solve(list<char>& li, list<char>::iterator& OutCursor, int M)
                 OutCursor--;
                 OutCursor = li.erase(OutCursor); // 삭제
             }
-            break;
-        case 'P':
             cin >> c;
             li.insert(OutCursor, c); // 문자 c 삽입
             break;
